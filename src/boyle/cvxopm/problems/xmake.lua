@@ -1,0 +1,12 @@
+target("cvxopm_osqp_problem")
+    set_kind("headeronly")
+    add_headerfiles("osqp_problem.hpp")
+    add_packages("boost", {public = true})
+    add_deps("common_aligned_allocator", "math_concepts", "math_dok_matrix", "math_lil_matrix")
+target_end()
+
+target("cvxopm_dense_problem")
+    set_kind("headeronly")
+    add_headerfiles("dense_problem.hpp")
+    add_deps("math_vectorx", "math_mdfunction_proxy")
+target_end()
