@@ -1,0 +1,17 @@
+target("bicycle_state_test")
+    add_rules("boyle.cxx.test")
+    add_files("state_test.cpp")
+    add_deps("bicycle_state")
+target_end()
+
+target("bicycle_kinematics_model_test")
+    add_rules("boyle.cxx.test")
+    add_files("kinematics_model_test.cpp")
+    add_deps("bicycle_kinematics_model")
+target_end()
+
+target("bicycle_dynamics_model_test")
+    add_rules("boyle.cxx.test")
+    add_files("dynamics_model_test.cpp")
+    add_deps("bicycle_dynamics_model")
+target_end()
