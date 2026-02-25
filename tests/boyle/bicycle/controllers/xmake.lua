@@ -1,0 +1,17 @@
+target("bicycle_feedforward_controller_test")
+    add_rules("boyle.cxx.test")
+    add_files("feedforward_controller_test.cpp")
+    add_deps("bicycle_feedforward_controller")
+target_end()
+
+target("bicycle_pid_controller_test")
+    add_rules("boyle.cxx.test")
+    add_files("pid_controller_test.cpp")
+    add_deps("bicycle_pid_controller")
+target_end()
+
+target("bicycle_model_predictive_controller_test")
+    add_rules("boyle.cxx.test")
+    add_files("model_predictive_controller_test.cpp")
+    add_deps("bicycle_model_predictive_controller")
+target_end()

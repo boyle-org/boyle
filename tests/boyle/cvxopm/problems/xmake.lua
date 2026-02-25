@@ -1,0 +1,12 @@
+target("cvxopm_osqp_problem_test")
+    add_rules("boyle.cxx.test")
+    add_files("osqp_problem_test.cpp")
+    add_deps("cvxopm_osqp_problem")
+target_end()
+
+target("cvxopm_dense_problem_test")
+    add_rules("boyle.cxx.test")
+    add_files("dense_problem_test.cpp")
+    add_packages("zpp_bits", {public = true})
+    add_deps("math_utils", "math_vectorx", "math_matrixx", "math_linear_mdfunction", "math_quadratic_mdfunction", "math_rosenbrock_function", "cvxopm_dense_problem")
+target_end()

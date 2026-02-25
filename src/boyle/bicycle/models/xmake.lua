@@ -1,0 +1,16 @@
+target("bicycle_state")
+    set_kind("headeronly")
+    add_headerfiles("state.hpp")
+target_end()
+
+target("bicycle_kinematics_model")
+    set_kind("headeronly")
+    add_headerfiles("kinematics_model.hpp")
+    add_deps("bicycle_state")
+target_end()
+
+target("bicycle_dynamics_model")
+    set_kind("headeronly")
+    add_headerfiles("dynamics_model.hpp")
+    add_deps("bicycle_state")
+target_end()
